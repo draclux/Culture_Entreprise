@@ -1,0 +1,9 @@
+# Image ubuntu du serveur
+FROM draclux/ubuntu-server
+
+LABEL maintainer="Jean-Michel Sanchez"
+LABEL version="1.0"
+
+#Commande pour lancer le serveur et le laisser tourner
+CMD /etc/init.d/apache2 start && tail -f /dev/null
+

@@ -1,0 +1,7 @@
+# Image  du jeu Pong
+FROM draclux/pong-pygame
+LABEL maintainer="Jean-Michel Sanchez"
+LABEL version="1.0"
+
+#Indique l'endroit où se déroule l'activité du conteneur
+WORKDIR /var/www/html

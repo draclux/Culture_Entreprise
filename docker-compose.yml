@@ -1,0 +1,24 @@
+version: "2"
+services: 
+    server:
+        build: ./serveur-dockerfile
+        container_name: serveurScore
+        ports:
+            - "8080:80"
+        volumes_from: 
+            - game:rw
+
+    game:
+        build: ./game-dockerfile
+        container_name: leJeu
+        environment:
+            - DISPLAY=$DISPLAY
+        volumes: 
+            - mon_score:/var/www/html
+            - /tmp/.X11-unix:/tmp/.X11-unix
+        command: python game.py
+    
+volumes:
+    mon_score:
+
+        
