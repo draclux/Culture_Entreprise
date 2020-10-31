@@ -21,3 +21,6 @@ Pour lancer le projet, veuillez suivre les étapes:
 
 7) ATTENTION, si toute fois le site web n'affiche pas les scores, vous devez VIDER le CACHE du navigateur et recharger la page. J'ai noté que le site web 
 fonctionnait mieux sous Firefox.
+
+Pour fermer le serveur dans le terminal, vous pouvez faire CTRL+C . De plus, lorsque vous fermez le jeu ainsi que tous les conteneurs et que vous relancez le jeu via le docker-compose, les scores des parties précédentes sont toujours affichés. Si vous souhaitez les supprimer, vous devez passer par docker et 
+sa commande: docker volume prune
